@@ -8,7 +8,7 @@ export default {
       colors: {
         customColor: "#817D92",
         customColor2: "#817D92",
-        customColor3: "#494C6B",
+        customColor3: "#E6E5EA",
         customColor4: "#9495A5",
         customColor5: "#3A7CFD",
         customColor6: "#393A4B",
