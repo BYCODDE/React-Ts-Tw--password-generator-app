@@ -6,8 +6,8 @@ export default {
       outline: {
       },
       colors: {
-        customColor: "#25273D",
-        customColor2: "rgba(118, 121, 146, 1)",
+        customColor: "#817D92",
+        customColor2: "#817D92",
         customColor3: "#494C6B",
         customColor4: "#9495A5",
         customColor5: "#3A7CFD",
@@ -16,13 +16,13 @@ export default {
         customColor8: "#4D5067",
         background: "#14131B",
         background2: "#08070B",
-        background3: "#E3E4F1",
+        background3: "#24232C",
         background4: "#55DDFF",
         background5: "#C058F3",
       },
 
       fontFamily: {
-        sans: ["CustomFont", "sans-serif"],
+        'jetbrains-mono': ['"JetBrains Mono"', 'monospace'],
       },
       boxShadow: {
         custom: "0 0 0 2px rgba(227, 228, 241, 0.6)",
