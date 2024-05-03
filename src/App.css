@@ -26,4 +26,7 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="checkbox"]:checked {
   background: var(--Neon-Green, #a4ffaf);
   border: 2px solid var(--Neon-Green, #a4ffaf);
+  background-image: url("/images/icon-check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }

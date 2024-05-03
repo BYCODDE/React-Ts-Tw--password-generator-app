@@ -28,17 +28,14 @@ export default function Main() {
       <section className="flex flex-col">
         <label className="flex gap-[20px] text-customColor3">
           <input
-            className="   w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
+            className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
             name="Include Uppercase Letters"
             id=""
           />{" "}
           Include Uppercase Letters
         </label>
-        <label
-          className="flex gap-[20px] text-customColor3"
-          htmlFor="Include Lowercase Letters"
-        >
+        <label className="flex gap-[20px] text-customColor3">
           <input
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
@@ -47,10 +44,7 @@ export default function Main() {
           />{" "}
           Include Lowercase Letters
         </label>
-        <label
-          className="flex gap-[20px] text-customColor3"
-          htmlFor="Include Numbers"
-        >
+        <label className="flex gap-[20px] text-customColor3">
           <input
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
@@ -59,10 +53,7 @@ export default function Main() {
           />
           Include Numbers
         </label>
-        <label
-          className="flex gap-[20px] text-customColor3"
-          htmlFor="Include Symbols"
-        >
+        <label className="flex gap-[20px] text-customColor3">
           <input
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none "
             type="checkbox"
