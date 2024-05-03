@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, useState } from "react";
-
+import arrow from "/images/icon-arrow-right.svg";
 export default function Main() {
   const [value, setValue] = useState(0);
 
@@ -8,7 +8,7 @@ export default function Main() {
     setValue(parseInt(event.target.value));
   };
   return (
-    <main className="pt-[21px] pr-[16px] pb-[16px] pl-[16px] w-[100%] max-h-[423px] bg-background3 mt-[24px]">
+    <main className="pt-[21px] pr-[16px] pb-[16px] pl-[16px] w-[100%] max-h-[100%] bg-background3 mt-[24px]">
       <section className="flex justify-between items-center">
         <h3 className="text-[18px] text-customColor3"> Character Length</h3>
         <h3 className="text-[32px] text-customColor4">{value}</h3>
@@ -27,28 +27,48 @@ export default function Main() {
       </section>
       <section className="flex flex-col">
         <label className="flex gap-[20px] text-customColor3">
-          <input type="checkbox" name="Include Uppercase Letters" id="" />{" "}
+          <input
+            className="   w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
+            type="checkbox"
+            name="Include Uppercase Letters"
+            id=""
+          />{" "}
           Include Uppercase Letters
         </label>
         <label
           className="flex gap-[20px] text-customColor3"
           htmlFor="Include Lowercase Letters"
         >
-          <input type="checkbox" name="Include Lowercase Letters" id="" />{" "}
+          <input
+            className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
+            type="checkbox"
+            name="Include Lowercase Letters"
+            id=""
+          />{" "}
           Include Lowercase Letters
         </label>
         <label
           className="flex gap-[20px] text-customColor3"
           htmlFor="Include Numbers"
         >
-          <input type="checkbox" name="Include Numbers" id="" />
+          <input
+            className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
+            type="checkbox"
+            name="Include Numbers"
+            id=""
+          />
           Include Numbers
         </label>
         <label
           className="flex gap-[20px] text-customColor3"
           htmlFor="Include Symbols"
         >
-          <input type="checkbox" name="Include Symbols" id="" />
+          <input
+            className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none "
+            type="checkbox"
+            name="Include Symbols"
+            id=""
+          />
           Include Symbols
         </label>
       </section>
@@ -65,9 +85,16 @@ export default function Main() {
             <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
           </div>
         </div>
-        {/* <button className="" type="button">
+      </section>
+      <section className="flex justify-between items-center">
+        {" "}
+        <button
+          className="bg-customColor4 flex justify-center items-center w-[100%] h-[56px] text-[20px] gap-[16px]"
+          type="button"
+        >
           GENERATE
-        </button> */}
+          <img src={arrow} alt="arrow" />
+        </button>
       </section>
     </main>
   );
