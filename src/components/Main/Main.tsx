@@ -20,7 +20,7 @@ export default function Main() {
             min={0}
             max={20}
             value={value}
-            className="w-full bg-center h-[8px] appearance-none rounded-none border-none focus:ring-0 bg-background4"
+            className="mb-[42px]  w-full bg-center h-[8px] appearance-none rounded-none border-none focus:ring-0 bg-background4"
             onChange={handleChange}
           />
         </div>
@@ -51,6 +51,23 @@ export default function Main() {
           <input type="checkbox" name="Include Symbols" id="" />
           Include Symbols
         </label>
+      </section>
+
+      <section className="">
+        <div className="bg-background4 flex justify-between p-[20px] text-[18px] mt-[32px] mb-[16px]">
+          <span className="text-customColor opacity-70">STRENGTH</span>
+          <div className="flex gap-[8px]">
+            <span className="mr-[16px] text-customColor3">MEDIUM</span>
+
+            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
+            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
+            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
+            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
+          </div>
+        </div>
+        {/* <button className="" type="button">
+          GENERATE
+        </button> */}
       </section>
     </main>
   );
