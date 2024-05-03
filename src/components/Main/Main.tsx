@@ -13,18 +13,16 @@ export default function Main() {
         <h3 className="text-[32px] text-customColor4">{value}</h3>
       </section>
       <section className="mt-[23px]">
-        <input
-          type="range"
-          min={0}
-          max={20}
-          value={value}
-          className=" mb-[42px] w-full bg-no-repeat appearance-none rounded-none border-none focus:ring-0 bg-background4 cursor-pointer"
-          style={{
-            backgroundImage: `url('./images/Oval.svg')`,
-            backgroundPosition: "center",
-          }}
-          onChange={handleChange}
-        />
+        <div className="">
+          <input
+            type="range"
+            min={0}
+            max={20}
+            value={value}
+            className="w-full bg-center h-[8px] appearance-none rounded-none border-none focus:ring-0 bg-background4"
+            onChange={handleChange}
+          />
+        </div>
       </section>
       <section className="flex flex-col">
         <label className="flex gap-[20px] text-customColor3">

@@ -1,0 +1,16 @@
+input[type="range"]::-webkit-slider-thumb {
+  z-index: 1 !important;
+  -webkit-appearance: none;
+  background: url("./images/Oval.svg") no-repeat center center;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+#myrange {
+  height: 28px;
+  width: 28px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: var(--Very-Dark-Grey, #18171f);
+}
