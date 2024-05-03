@@ -1,10 +1,11 @@
-import { useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ChangeEvent, useState } from "react";
 
 export default function Main() {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(parseInt(event.target.value));
   };
   return (
     <main className="pt-[21px] pr-[16px] pb-[16px] pl-[16px] w-[100%] max-h-[423px] bg-background3 mt-[24px]">
