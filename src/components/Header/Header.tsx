@@ -9,7 +9,15 @@ export default function Header({ data, isActive, value }) {
         </h1>
         <div className=" text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19 text-[32px] font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
-          <p>{isActive ? value * 2 : null}</p>
+          <p>
+            {isActive
+              ? data[0]
+                  .split("")
+                  .filter((item) => item !== item.toLowerCase())
+                  .join("")
+              : null}
+          </p>
+
           <img src={copy} alt="copy_svg" />
         </div>
       </section>
