@@ -1,12 +1,22 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { ChangeEvent, useState } from "react";
 import arrow from "/images/icon-arrow-right.svg";
-export default function Main() {
+export default function Main({ setData, data, isActive, setIsActive }) {
   const [value, setValue] = useState(0);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
+  // const passwordGenerate = () => {
+  //   event.target.value = data;
+  //   console.log(event.target.value);
+  // };
+
+  const handleActive = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <main className="pt-[21px] pr-[16px] pb-[16px] pl-[16px] w-[100%] max-h-[100%] bg-background3 mt-[24px]">
       <section className="flex justify-between items-center">
@@ -82,6 +92,7 @@ export default function Main() {
         <button
           className="bg-customColor4 flex justify-center items-center w-[100%] h-[56px] text-[20px] gap-[16px]"
           type="button"
+          onClick={handleActive}
         >
           GENERATE
           <img src={arrow} alt="arrow" />
