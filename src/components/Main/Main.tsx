@@ -1,10 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 import arrow from "/images/icon-arrow-right.svg";
-export default function Main({ setData, data, isActive, setIsActive }) {
-  const [value, setValue] = useState(0);
-
+export default function Main({
+  value,
+  setValue,
+  setData,
+  data,
+  isActive,
+  setIsActive,
+}) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };

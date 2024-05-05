@@ -9,10 +9,14 @@ function App() {
   );
   const [isActive, setIsActive] = useState(false);
 
+  const [value, setValue] = useState(0);
+
   return (
     <>
-      <Header isActive={isActive} data={data}></Header>
+      <Header value={value} isActive={isActive} data={data}></Header>
       <Main
+        value={value}
+        setValue={setValue}
         isActive={isActive}
         setIsActive={setIsActive}
         data={data}

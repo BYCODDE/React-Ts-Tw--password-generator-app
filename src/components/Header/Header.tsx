@@ -1,6 +1,6 @@
 import copy from "/images/icon-copy.svg";
 
-export default function Header({ data, isActive }) {
+export default function Header({ data, isActive, value }) {
   return (
     <header className="">
       <section className="flex justify-center  flex-col items-center cursor-pointer">
@@ -9,7 +9,7 @@ export default function Header({ data, isActive }) {
         </h1>
         <div className=" text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19 text-[32px] font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
-          <p>{isActive ? "data" : null}</p>
+          <p>{isActive ? value * 2 : null}</p>
           <img src={copy} alt="copy_svg" />
         </div>
       </section>
