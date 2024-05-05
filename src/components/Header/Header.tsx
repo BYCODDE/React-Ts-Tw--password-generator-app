@@ -6,12 +6,15 @@ export default function Header({ data, isActive, value }) {
 
     for (let i = 0; i < value; i++) {
       const randomIndex = Math.floor(Math.random() * data[0].length);
-      randomCharacters.push(data[0][randomIndex]);
+      const randomChar = data[0][randomIndex];
+      if (randomChar !== randomChar.toLowerCase()) {
+        randomCharacters.push(randomChar);
+      } else {
+        i--;
+      }
     }
-    const info = randomCharacters.filter((item) => item !== item.toLowerCase());
-    console.log();
 
-    return info.join("");
+    return randomCharacters;
   };
 
   console.log(getRandomCharacters());
@@ -24,13 +27,7 @@ export default function Header({ data, isActive, value }) {
         </h1>
         <div className=" text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19 text-[32px] font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
-          <p>
-            {/* {getRandomCharacter()
-              .split("")
-              .filter((item: string) => item !== item.toLowerCase())
-              .join("")} */}
-            {getRandomCharacters()}
-          </p>
+          <p>{getRandomCharacters()}</p>
 
           <img src={copy} alt="copy_svg" />
         </div>
