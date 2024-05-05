@@ -1,24 +1,47 @@
 import copy from "/images/icon-copy.svg";
 
 export default function Header({ data, isActive, value }) {
-  const getRandomCharacters = () => {
-    const randomCharacters = [];
-
+  const getUpperCharacters = () => {
+    const upperCharacters = [];
     for (let i = 0; i < value; i++) {
       const randomIndex = Math.floor(Math.random() * data[0].length);
       const randomChar = data[0][randomIndex];
       if (randomChar !== randomChar.toLowerCase()) {
-        randomCharacters.push(randomChar);
+        upperCharacters.push(randomChar);
       } else {
         i--;
       }
     }
 
-    return randomCharacters;
+    return upperCharacters;
   };
 
-  console.log(getRandomCharacters());
-
+  const getLowerCharacter = () => {
+    const lowerCharacters = [];
+    for (let i = 0; i < value; i++) {
+      const randomIndex = Math.floor(Math.random() * data[0].length);
+      const randomChar = data[0][randomIndex];
+      if (randomChar !== randomChar.toUpperCase()) {
+        lowerCharacters.push(randomChar);
+      } else {
+        i--;
+      }
+    }
+    return lowerCharacters;
+  };
+  const getNumberCharacter = () => {
+    const numberCharacters = [];
+    for (let i = 0; i < value; i++) {
+      const randomIndex = Math.floor(Math.random() * data[0].length);
+      const randomChar = data[0][randomIndex];
+      if (!isNaN(Number(randomChar))) {
+        numberCharacters.push(randomChar);
+      } else {
+        i--;
+      }
+    }
+    return numberCharacters;
+  };
   return (
     <header className="">
       <section className="flex justify-center  flex-col items-center cursor-pointer">
@@ -27,7 +50,9 @@ export default function Header({ data, isActive, value }) {
         </h1>
         <div className=" text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19 text-[32px] font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
-          <p>{getRandomCharacters()}</p>
+          {/* <p>{getUpperCharacters()}</p> */}
+          {/* <p>{getLowerCharacter()}</p> */}
+          <p>{getNumberCharacter()}</p>
 
           <img src={copy} alt="copy_svg" />
         </div>
