@@ -9,14 +9,13 @@ export default function Main({
   data,
   isActive,
   setIsActive,
+  handleUpper,
+  handleLower,
+  handleNumber,
 }) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
-  // const passwordGenerate = () => {
-  //   event.target.value = data;
-  //   console.log(event.target.value);
-  // };
 
   const handleActive = () => {
     setIsActive(!isActive);
@@ -46,6 +45,7 @@ export default function Main({
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
             name="Include Uppercase Letters"
+            onClick={() => handleUpper()}
             id=""
           />{" "}
           Include Uppercase Letters
@@ -55,6 +55,7 @@ export default function Main({
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
             name="Include Lowercase Letters"
+            onClick={() => handleLower()}
             id=""
           />{" "}
           Include Lowercase Letters
@@ -64,6 +65,7 @@ export default function Main({
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
             name="Include Numbers"
+            onClick={() => handleNumber()}
             id=""
           />
           Include Numbers
