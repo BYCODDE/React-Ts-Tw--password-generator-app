@@ -12,6 +12,7 @@ export default function Header({
   isUpper,
   isLower,
   isNumber,
+  isSymbol,
 }) {
   // const [upper,setUpper] = useState(false)
 
@@ -28,6 +29,7 @@ export default function Header({
             {isActive && isUpper ? getUpperCharacters() : null}
             {isActive && isLower ? getLowerCharacter() : null}
             {isActive && isNumber ? getNumberCharacter() : null}
+            {isActive && isSymbol ? getSymbolCharacter() : null}
           </p>
 
           <img src={copy} alt="copy_svg" />

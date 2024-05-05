@@ -12,6 +12,7 @@ export default function Main({
   handleUpper,
   handleLower,
   handleNumber,
+  handleSymbol,
 }) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
@@ -75,6 +76,7 @@ export default function Main({
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none "
             type="checkbox"
             name="Include Symbols"
+            onClick={() => handleSymbol()}
             id=""
           />
           Include Symbols

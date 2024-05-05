@@ -26,6 +26,12 @@ function App() {
     setIsNumber(!isNumber);
   };
 
+  const [isSymbol, setIsSymbol] = useState(false);
+
+  const handleSymbol = () => {
+    setIsSymbol(!isSymbol);
+  };
+
   const [value, setValue] = useState(0);
 
   const getUpperCharacters = () => {
@@ -97,8 +103,10 @@ function App() {
         isUpper={isUpper}
         isLower={isLower}
         isNumber={isNumber}
+        isSymbol={isSymbol}
       ></Header>
       <Main
+        handleSymbol={handleSymbol}
         handleNumber={handleNumber}
         handleUpper={handleUpper}
         handleLower={handleLower}
