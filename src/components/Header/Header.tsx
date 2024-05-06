@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import copysvg from "/images/icon-copy.svg";
+import copySvg from "/images/icon-copy.svg";
 
 export default function Header({
-  data,
   isActive,
-  value,
   getSymbolCharacter,
   getNumberCharacter,
   getUpperCharacters,
@@ -25,7 +23,7 @@ export default function Header({
 
   useEffect(() => {
     if (textLength > 0) {
-      console.log("Length of text:", textLength);
+      textLength;
     }
   }, [textLength]);
   return (
@@ -48,7 +46,7 @@ export default function Header({
           </p>
           <div className="flex justify-center	gap-[16px]">
             <span className={`text-customColor4 text-[16px] `}>COPIED</span>
-            <img src={copysvg} alt="copy_svg" />
+            <img src={copySvg} alt="copy_svg" />
           </div>
         </div>
       </section>

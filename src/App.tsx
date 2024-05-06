@@ -99,9 +99,7 @@ function App() {
         getNumberCharacter={getNumberCharacter}
         getUpperCharacters={getUpperCharacters}
         getLowerCharacter={getLowerCharacter}
-        value={value}
         isActive={isActive}
-        data={data}
         isUpper={isUpper}
         isLower={isLower}
         isNumber={isNumber}
@@ -117,8 +115,6 @@ function App() {
         setValue={setValue}
         isActive={isActive}
         setIsActive={setIsActive}
-        data={data}
-        setData={setData}
       ></Main>
     </>
   );

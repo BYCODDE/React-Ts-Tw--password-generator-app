@@ -5,8 +5,7 @@ import arrow from "/images/icon-arrow-right.svg";
 export default function Main({
   value,
   setValue,
-  setData,
-  data,
+
   isActive,
   setIsActive,
   handleUpper,
@@ -17,7 +16,6 @@ export default function Main({
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
-  // console.log(paragraphRef.current.innerHTML.length);
 
   const handleActive = () => {
     setIsActive(!isActive);
