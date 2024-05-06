@@ -3,8 +3,22 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+interface HeaderProps {
+  isActive: boolean;
+  getSymbolCharacter: () => string[];
+  getNumberCharacter: () => string[];
+  getUpperCharacters: () => string[];
+  getLowerCharacter: () => string[];
+  isUpper: boolean;
+  isLower: boolean;
+  isNumber: boolean;
+  isSymbol: boolean;
+  paragraphRef: React.RefObject<HTMLParagraphElement>;
+}
+
 function App() {
-  const paragraphRef = useRef(null);
+  const paragraphRef = useRef<HTMLParagraphElement>();
 
   const [data, setData] = useState([
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}|:<>?`-=[]\\;',./'",
@@ -105,7 +119,8 @@ function App() {
         isNumber={isNumber}
         isSymbol={isSymbol}
         paragraphRef={paragraphRef}
-      ></Header>
+      />
+
       <Main
         handleSymbol={handleSymbol}
         handleNumber={handleNumber}

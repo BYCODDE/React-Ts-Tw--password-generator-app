@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import copySvg from "/images/icon-copy.svg";
+import { HeaderProps } from "./App";
 
 export default function Header({
   isActive,
@@ -12,7 +13,7 @@ export default function Header({
   isNumber,
   isSymbol,
   paragraphRef,
-}) {
+}: HeaderProps) {
   // const [copy, setCopy] = useState(false);
 
   // const handleCopy = () => {
