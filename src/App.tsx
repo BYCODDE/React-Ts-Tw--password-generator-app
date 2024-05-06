@@ -15,6 +15,7 @@ export interface HeaderProps {
   isNumber: boolean;
   isSymbol: boolean;
   paragraphRef: React.RefObject<HTMLParagraphElement>;
+  
 }
 
 function App() {
