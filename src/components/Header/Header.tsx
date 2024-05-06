@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import copySvg from "/images/icon-copy.svg";
-import { HeaderProps } from "./App";
+import { HeaderProps } from "../../App";
 
 export default function Header({
   isActive,
@@ -26,7 +26,7 @@ export default function Header({
     if (paragraphRef.current) {
       setTextLength(paragraphRef.current.innerHTML.length);
     }
-  }, [isActive]);
+  }, [isActive, paragraphRef]);
 
   useEffect(() => {
     if (textLength > 0) {
@@ -41,7 +41,6 @@ export default function Header({
         </h1>
         <div className="text-[20px] text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19  font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
-
           <p
             ref={paragraphRef}
             style={{ fontSize: textLength > 20 ? "8px" : "20px" }}

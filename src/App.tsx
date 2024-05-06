@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface HeaderProps {
+
+export interface HeaderProps {
   isActive: boolean;
   getSymbolCharacter: () => string[];
   getNumberCharacter: () => string[];
@@ -18,8 +18,9 @@ interface HeaderProps {
 }
 
 function App() {
-  const paragraphRef = useRef<HTMLParagraphElement>();
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [data, setData] = useState([
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}|:<>?`-=[]\\;',./'",
   ]);
@@ -108,7 +109,7 @@ function App() {
 
   return (
     <>
-      <Header
+      <Header 
         getSymbolCharacter={getSymbolCharacter}
         getNumberCharacter={getNumberCharacter}
         getUpperCharacters={getUpperCharacters}
