@@ -19,7 +19,7 @@ export default function Header({
         <h1 className="text-customColor font-bold text-[20px] mb-[16px]">
           Password Generator
         </h1>
-        <div className=" text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19 text-[32px] font-bold  ">
+        <div className="text-[20px] text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19  font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
 
           <p>
@@ -28,8 +28,10 @@ export default function Header({
             {isActive && isNumber ? getNumberCharacter() : null}
             {isActive && isSymbol ? getSymbolCharacter() : null}
           </p>
-
-          <img src={copy} alt="copy_svg" />
+          <div className="flex justify-center	gap-[16px]">
+            <span className="text-customColor4 text-[16px]">COPIED</span>
+            <img src={copy} alt="copy_svg" />
+          </div>
         </div>
       </section>
     </header>
