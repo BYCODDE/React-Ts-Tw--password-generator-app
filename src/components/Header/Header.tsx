@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import copy from "/images/icon-copy.svg";
+import copysvg from "/images/icon-copy.svg";
 
 export default function Header({
   data,
@@ -47,8 +47,8 @@ export default function Header({
             {isActive && isSymbol ? getSymbolCharacter() : null}
           </p>
           <div className="flex justify-center	gap-[16px]">
-            <span className="text-customColor4 text-[16px]">COPIED</span>
-            <img src={copy} alt="copy_svg" />
+            <span className={`text-customColor4 text-[16px] `}>COPIED</span>
+            <img src={copysvg} alt="copy_svg" />
           </div>
         </div>
       </section>
