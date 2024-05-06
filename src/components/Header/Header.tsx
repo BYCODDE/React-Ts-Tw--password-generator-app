@@ -1,4 +1,3 @@
-import { useState } from "react";
 import copy from "/images/icon-copy.svg";
 
 export default function Header({
@@ -14,8 +13,6 @@ export default function Header({
   isNumber,
   isSymbol,
 }) {
-  // const [upper,setUpper] = useState(false)
-
   return (
     <header className="">
       <section className="flex justify-center  flex-col items-center cursor-pointer">

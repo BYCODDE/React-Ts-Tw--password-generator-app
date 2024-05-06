@@ -15,14 +15,6 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--Very-Dark-Grey, #18171f);
 }
 
-/* input[type="checkbox"] {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--Almost-White, #e6e5ea);
-  cursor: pointer;
-} */
-
 input[type="checkbox"]:checked {
   background: var(--Neon-Green, #a4ffaf);
   border: 2px solid var(--Neon-Green, #a4ffaf);
