@@ -13,6 +13,12 @@ export default function Header({
   isSymbol,
   paragraphRef,
 }) {
+  // const [copy, setCopy] = useState(false);
+
+  // const handleCopy = () => {
+  //   setCopy(true);
+  // };
+
   const [textLength, setTextLength] = useState(0);
 
   useEffect(() => {
@@ -37,7 +43,7 @@ export default function Header({
 
           <p
             ref={paragraphRef}
-            style={{ fontSize: textLength > 26 ? "8px" : "20px" }}
+            style={{ fontSize: textLength > 20 ? "8px" : "20px" }}
           >
             {isActive && isUpper ? getUpperCharacters() : null}
             {isActive && isLower ? getLowerCharacter() : null}
