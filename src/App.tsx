@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
 function App() {
+  const paragraphRef = useRef(null);
+
   const [data, setData] = useState([
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}|:<>?`-=[]\\;',./'",
   ]);
@@ -104,6 +106,7 @@ function App() {
         isLower={isLower}
         isNumber={isNumber}
         isSymbol={isSymbol}
+        paragraphRef={paragraphRef}
       ></Header>
       <Main
         handleSymbol={handleSymbol}

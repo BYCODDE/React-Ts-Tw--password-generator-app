@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import copy from "/images/icon-copy.svg";
 
 export default function Header({
@@ -12,7 +13,21 @@ export default function Header({
   isLower,
   isNumber,
   isSymbol,
+  paragraphRef,
 }) {
+  const [textLength, setTextLength] = useState(0);
+
+  useEffect(() => {
+    if (paragraphRef.current) {
+      setTextLength(paragraphRef.current.innerHTML.length);
+    }
+  }, [isActive]);
+
+  useEffect(() => {
+    if (textLength > 0) {
+      console.log("Length of text:", textLength);
+    }
+  }, [textLength]);
   return (
     <header className="">
       <section className="flex justify-center  flex-col items-center cursor-pointer">
@@ -22,7 +37,10 @@ export default function Header({
         <div className="text-[20px] text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19  font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
 
-          <p>
+          <p
+            ref={paragraphRef}
+            style={{ fontSize: textLength > 26 ? "8px" : "20px" }}
+          >
             {isActive && isUpper ? getUpperCharacters() : null}
             {isActive && isLower ? getLowerCharacter() : null}
             {isActive && isNumber ? getNumberCharacter() : null}

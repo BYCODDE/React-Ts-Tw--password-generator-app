@@ -17,6 +17,7 @@ export default function Main({
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
+  // console.log(paragraphRef.current.innerHTML.length);
 
   const handleActive = () => {
     setIsActive(!isActive);
