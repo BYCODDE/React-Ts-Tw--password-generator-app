@@ -2,17 +2,17 @@
 
 import { ChangeEvent } from "react";
 import arrow from "/images/icon-arrow-right.svg";
-import { HeaderProps } from "../../App";
+import { MainProps } from "../../App";
 export default function Main({
   value,
   setValue,
   isActive,
   setIsActive,
-  handleUpper, ///TODO: დამატება მთავარ სიაში არ დამავიწყდეს !!!!
+  handleUpper,
   handleLower,
   handleNumber,
   handleSymbol,
-}: HeaderProps) {
+}: MainProps) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
@@ -30,7 +30,6 @@ export default function Main({
       <section className="mt-[23px]">
         <div className="">
           <input
-            ///TODO: progress-ის გამოყენება დამჭირდება!
             type="range"
             min={0}
             max={20}

@@ -2,8 +2,7 @@ import { useRef, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-
-
+import { Dispatch, SetStateAction } from "react";
 export interface HeaderProps {
   isActive: boolean;
   getSymbolCharacter: () => string[];
@@ -15,7 +14,17 @@ export interface HeaderProps {
   isNumber: boolean;
   isSymbol: boolean;
   paragraphRef: React.RefObject<HTMLParagraphElement>;
-  
+}
+
+export interface MainProps {
+  handleSymbol: () => void;
+  handleNumber: () => void;
+  handleUpper: () => void;
+  handleLower: () => void;
+  value: number;
+  setValue: Dispatch<SetStateAction<number>>;
+  setIsActive: Dispatch<SetStateAction<boolean>>;
+  isActive: boolean;
 }
 
 function App() {
@@ -110,7 +119,7 @@ function App() {
 
   return (
     <>
-      <Header 
+      <Header
         getSymbolCharacter={getSymbolCharacter}
         getNumberCharacter={getNumberCharacter}
         getUpperCharacters={getUpperCharacters}
