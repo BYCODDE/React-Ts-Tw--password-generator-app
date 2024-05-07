@@ -22,3 +22,8 @@ input[type="checkbox"]:checked {
   background-position: center;
   background-repeat: no-repeat;
 }
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: url("../images/Oval2.svg") no-repeat center center;
+  border-radius: 50%;
+  border: 2px solid #a4ffaf;
+}

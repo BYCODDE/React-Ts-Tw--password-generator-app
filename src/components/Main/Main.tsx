@@ -20,6 +20,10 @@ export default function Main({
   const handleActive = () => {
     setIsActive(!isActive);
   };
+  const colorStop = (value / 20) * 100 + "%";
+  const thumbColor = "#A4FFAF";
+
+  const gradient = `linear-gradient(to right, ${thumbColor} 0%, ${thumbColor} ${colorStop}, #18171F ${colorStop}, #18171F 100%)`;
 
   return (
     <main className="pt-[21px] pr-[16px] pb-[16px] pl-[16px] w-[100%] max-h-[100%] bg-background3 mt-[24px]">
@@ -36,6 +40,7 @@ export default function Main({
             value={value}
             className="mb-[42px]  w-full bg-center h-[8px] appearance-none rounded-none border-none focus:ring-0 bg-background4"
             onChange={handleChange}
+            style={{ backgroundImage: gradient }} 
           />
         </div>
       </section>
