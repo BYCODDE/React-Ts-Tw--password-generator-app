@@ -30,8 +30,7 @@ export interface MainProps {
 function App() {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [data, setData] = useState([
+  const [data] = useState([
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}|:<>?`-=[]\\;',./'",
   ]);
   const [isActive, setIsActive] = useState(false);
