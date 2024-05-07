@@ -52,7 +52,11 @@ export default function Header({
           </p>
           <div className="flex justify-center	gap-[16px]">
             <span className={`text-customColor4 text-[16px] `}>COPIED</span>
-            <img src={copySvg} alt="copy_svg" />
+            <img
+              src={copySvg}
+              alt="copy_svg"
+              className="hover:bg-background6"
+            />
           </div>
         </div>
       </section>

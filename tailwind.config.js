@@ -19,6 +19,7 @@ export default {
         background3: "#24232C",
         background4: "#18171F",
         background5: "#C058F3",
+        background6: "#FFFFFF",
       },
 
       fontFamily: {
