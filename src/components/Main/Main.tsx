@@ -13,18 +13,17 @@ export default function Main({
   handleNumber,
   handleSymbol,
 }: MainProps) {
-  let number = 0;
+  const [check, setCheck] = useState(false);
+  let num = 0;
 
-  const [check, setCheck] = useState(0);
-
-  const handleCheckboxChange = (event) => {
+  const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     setCheck(event.target.checked);
     if (check) {
-      number++;
+      num++;
     } else {
-      number--;
+      num--;
     }
-    console.log(number);
+    console.log(num);
     console.log(check);
   };
 
@@ -76,6 +75,7 @@ export default function Main({
             type="checkbox"
             name="Include Lowercase Letters"
             onClick={() => handleLower()}
+            onChange={handleCheckboxChange}
           />{" "}
           Include Lowercase Letters
         </label>
@@ -85,6 +85,7 @@ export default function Main({
             type="checkbox"
             name="Include Numbers"
             onClick={() => handleNumber()}
+            onChange={handleCheckboxChange}
           />
           Include Numbers
         </label>
@@ -94,6 +95,7 @@ export default function Main({
             type="checkbox"
             name="Include Symbols"
             onClick={() => handleSymbol()}
+            onChange={handleCheckboxChange}
           />
           Include Symbols
         </label>
@@ -103,30 +105,18 @@ export default function Main({
         <div className="bg-background4 flex justify-between p-[20px] text-[18px] mt-[32px] mb-[16px]">
           <span className="text-customColor opacity-70">STRENGTH</span>
           <div className="flex gap-[8px]">
-            {/* <span
-              className={`
-                
-                  
-              mr-[16px] text-customColor3`}
-            >
-              TOO WEAK
+            <span className="mr-[16px] text-customColor3">
+              {num === 1 ? "TOO WEAK" : null}
             </span>
-            <span
-              className={`
-                
-               mr-[16px] text-customColor3`}
-            >
-              {" "}
-              WEAK
+            <span className="mr-[16px] text-customColor3">
+              {num === 2 ? " WEAK" : null}
             </span>
-            <span
-              className={`
-                
-               mr-[16px] text-customColor3`}
-            >
-              MEDIUM
-            </span> */}
-            {/* <span className="mr-[16px] text-customColor3">STRONG</span> */}
+            <span className="mr-[16px] text-customColor3">
+              {num === 3 ? "MEDIUM" : null}
+            </span>
+            <span className="mr-[16px] text-customColor3">
+              {num === 4 ? "HARD" : null}
+            </span>
 
             <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
             <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
