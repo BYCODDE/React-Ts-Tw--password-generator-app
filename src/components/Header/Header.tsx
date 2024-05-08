@@ -16,8 +16,6 @@ export default function Header({
 }: HeaderProps) {
   const [copy, setCopy] = useState(false);
 
-  console.log(false);
-
   const handleCopy = () => {
     setCopy(!copy);
   };
@@ -36,12 +34,12 @@ export default function Header({
     }
   }, [textLength]);
   return (
-    <header className="">
+    <header>
       <section className="flex justify-center  flex-col items-center cursor-pointer">
         <h1 className="text-customColor font-bold text-[20px] mb-[16px]">
           Password Generator
         </h1>
-        <div className="text-[20px] text-customColor3  flex justify-between items-center p-[16px] pointer-events-none w-[100%] h-[80px] bg-background3 text-Almost-White p-19  font-bold  ">
+        <div className="text-[20px] text-customColor3  flex justify-between items-center p-[16px]  w-[100%] h-[80px] bg-background3 text-Almost-White p-19  font-bold  ">
           <span className="opacity-30"> P4$5W0rD!</span>
           <p
             ref={paragraphRef}
@@ -59,13 +57,12 @@ export default function Header({
             >
               COPIED
             </span>
-            {/* <img
+            <img
               onClick={handleCopy}
               src={copySvg}
               alt="copy_svg"
               className="hover:bg-background6"
-            /> */}
-            <div className="w-10 h-10 bg-red-600" onClick={handleCopy}></div>
+            />
           </div>
         </div>
       </section>
