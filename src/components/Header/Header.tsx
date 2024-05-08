@@ -14,11 +14,13 @@ export default function Header({
   isSymbol,
   paragraphRef,
 }: HeaderProps) {
-  // const [copy, setCopy] = useState(false);
+  const [copy, setCopy] = useState(false);
 
-  // const handleCopy = () => {
-  //   setCopy(true);
-  // };
+  console.log(false);
+
+  const handleCopy = () => {
+    setCopy(!copy);
+  };
 
   const [textLength, setTextLength] = useState(0);
 
@@ -51,12 +53,19 @@ export default function Header({
             {isActive && isSymbol ? getSymbolCharacter() : null}
           </p>
           <div className="flex justify-center	gap-[16px]">
-            <span className={`text-customColor4 text-[16px] `}>COPIED</span>
-            <img
+            <span
+              className={`text-customColor4 text-[16px]  `}
+              style={copy ? { display: "block" } : { display: "none" }}
+            >
+              COPIED
+            </span>
+            {/* <img
+              onClick={handleCopy}
               src={copySvg}
               alt="copy_svg"
               className="hover:bg-background6"
-            />
+            /> */}
+            <div className="w-10 h-10 bg-red-600" onClick={handleCopy}></div>
           </div>
         </div>
       </section>

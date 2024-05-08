@@ -24,6 +24,9 @@ export default function Main({
   const handleCheckboxChange2 = () => {
     setIsChecked2(!isChecked2);
   };
+  const handleCheckboxChange3 = () => {
+    setIsChecked3(!isChecked3);
+  };
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
@@ -82,6 +85,8 @@ export default function Main({
         </label>
         <label className="flex gap-[20px] text-customColor3">
           <input
+            checked={isChecked3}
+            onChange={handleCheckboxChange3}
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
             name="Include Numbers"
@@ -123,7 +128,19 @@ export default function Main({
               {" "}
               WEAK
             </span>
-            {/* <span className="mr-[16px] text-customColor3">MEDIUM</span> */}
+            {/* <span
+              className={`${
+                (isChecked || isChecked2) &&
+                !(isChecked && isChecked2) &&
+                isChecked &&
+                isChecked2 &&
+                isChecked3
+                  ? "block"
+                  : "hidden"
+              } mr-[16px] text-customColor3`}
+            >
+              MEDIUM
+            </span> */}
             {/* <span className="mr-[16px] text-customColor3">STRONG</span> */}
 
             <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
