@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 import arrow from "/images/icon-arrow-right.svg";
 import { MainProps } from "../../App";
 export default function Main({
@@ -13,6 +13,17 @@ export default function Main({
   handleNumber,
   handleSymbol,
 }: MainProps) {
+  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+  const [isChecked3, setIsChecked3] = useState(false);
+  const [isChecked4, setIsChecked4] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+  const handleCheckboxChange2 = () => {
+    setIsChecked2(!isChecked2);
+  };
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
@@ -40,13 +51,15 @@ export default function Main({
             value={value}
             className="mb-[42px]  w-full bg-center h-[8px] appearance-none rounded-none border-none focus:ring-0 bg-background4"
             onChange={handleChange}
-            style={{ backgroundImage: gradient }} 
+            style={{ backgroundImage: gradient }}
           />
         </div>
       </section>
       <section className="flex flex-col">
         <label className="flex gap-[20px] text-customColor3">
           <input
+            checked={isChecked}
+            onChange={handleCheckboxChange}
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
             name="Include Uppercase Letters"
@@ -57,6 +70,8 @@ export default function Main({
         </label>
         <label className="flex gap-[20px] text-customColor3">
           <input
+            checked={isChecked2}
+            onChange={handleCheckboxChange2}
             className="w-5 h-5 border-2 border-almost-white cursor-pointer appearance-none"
             type="checkbox"
             name="Include Lowercase Letters"
@@ -91,7 +106,25 @@ export default function Main({
         <div className="bg-background4 flex justify-between p-[20px] text-[18px] mt-[32px] mb-[16px]">
           <span className="text-customColor opacity-70">STRENGTH</span>
           <div className="flex gap-[8px]">
-            <span className="mr-[16px] text-customColor3">MEDIUM</span>
+            <span
+              className={`${
+                (isChecked || isChecked2) && !(isChecked && isChecked2)
+                  ? "block"
+                  : "hidden"
+              } mr-[16px] text-customColor3`}
+            >
+              TOO WEAK
+            </span>
+            <span
+              className={`${
+                isChecked && isChecked2 ? "block" : "hidden"
+              } mr-[16px] text-customColor3`}
+            >
+              {" "}
+              WEAK
+            </span>
+            {/* <span className="mr-[16px] text-customColor3">MEDIUM</span> */}
+            {/* <span className="mr-[16px] text-customColor3">STRONG</span> */}
 
             <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
             <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
