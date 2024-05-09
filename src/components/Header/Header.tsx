@@ -57,12 +57,15 @@ export default function Header({
             >
               COPIED
             </span>
-            <img
-              onClick={handleCopy}
-              src={copySvg}
-              alt="copy_svg"
-              className="hover:bg-background6"
-            />
+            <div>
+              <img
+              id="img-content"
+                onClick={handleCopy}
+                src={copySvg}
+                alt="copy_svg"
+                className=""
+              />
+            </div>
           </div>
         </div>
       </section>

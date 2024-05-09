@@ -14,15 +14,11 @@ export default function Main({
   handleSymbol,
 }: MainProps) {
   const [check, setCheck] = useState(false);
-  let num = 0;
+  const [num, setNum] = useState(0);
 
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     setCheck(event.target.checked);
-    if (check) {
-      num++;
-    } else {
-      num--;
-    }
+    setNum(prevNum => event.target.checked ? prevNum + 1 : prevNum - 1);
     console.log(num);
     console.log(check);
   };
