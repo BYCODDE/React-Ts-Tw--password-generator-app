@@ -3,8 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      outline: {
-      },
+      outline: {},
       colors: {
         customColor: "#817D92",
         customColor2: "#817D92",
@@ -20,14 +19,22 @@ export default {
         background4: "#18171F",
         background5: "#C058F3",
         background6: "#FFFFFF",
+        tooWeak: "#F64A4A",
+        weak: "#FB7C58",
+        medium: "#F8CD65",
+        strong: "#A4FFAF",
       },
 
       fontFamily: {
-        'jetbrains-mono': ['"JetBrains Mono"', 'monospace'],
+        "jetbrains-mono": ['"JetBrains Mono"', "monospace"],
       },
       boxShadow: {
         custom: "0 0 0 2px rgba(227, 228, 241, 0.6)",
         customColor2: "0 0 0 2px rgba(57, 58, 75, 1)",
+      },
+      filter: {
+        white:
+          "invert(100%) sepia(93%) saturate(0%) hue-rotate(276deg) brightness(107%) contrast(108%)",
       },
     },
   },

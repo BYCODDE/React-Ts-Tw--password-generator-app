@@ -59,11 +59,10 @@ export default function Header({
             </span>
             <div>
               <img
-              id="img-content"
+                id="img-content"
                 onClick={handleCopy}
                 src={copySvg}
                 alt="copy_svg"
-                className=""
               />
             </div>
           </div>

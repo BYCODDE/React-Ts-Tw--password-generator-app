@@ -13,14 +13,10 @@ export default function Main({
   handleNumber,
   handleSymbol,
 }: MainProps) {
-  const [check, setCheck] = useState(false);
   const [num, setNum] = useState(0);
 
   const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setCheck(event.target.checked);
-    setNum(prevNum => event.target.checked ? prevNum + 1 : prevNum - 1);
-    console.log(num);
-    console.log(check);
+    setNum(event.target.checked ? num + 1 : num - 1);
   };
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -114,10 +110,48 @@ export default function Main({
               {num === 4 ? "HARD" : null}
             </span>
 
-            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
-            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
-            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
-            <div className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"></div>
+            <div
+              className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"
+              style={{
+                backgroundColor:
+                  num === 1
+                    ? "#F64A4A"
+                    : num === 2
+                    ? "#FB7C58"
+                    : num === 3
+                    ? "#F8CD65"
+                    : num === 4
+                    ? "#A4FFAF"
+                    : "",
+              }}
+            ></div>
+            <div
+              className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"
+              style={{
+                backgroundColor:
+                  num === 2
+                    ? "#FB7C58"
+                    : num === 3
+                    ? "#F8CD65"
+                    : num === 4
+                    ? "#A4FFAF"
+                    : "",
+              }}
+            ></div>
+            <div
+              style={{
+                backgroundColor:
+                  num === 3 ? "#F8CD65" : num === 4 ? "#A4FFAF" : "",
+              }}
+              className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"
+            ></div>
+
+            <div
+              className="w-[10px] h-[28px] border-2 border-solid border-Almost-White dark:border-E6E5EA"
+              style={{
+                backgroundColor: num === 4 ? "#A4FFAF" : "",
+              }}
+            ></div>
           </div>
         </div>
       </section>
