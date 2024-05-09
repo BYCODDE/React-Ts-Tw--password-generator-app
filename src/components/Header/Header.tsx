@@ -47,7 +47,13 @@ export default function Header({
           Password Generator
         </h1>
         <div className="text-[20px] text-customColor3  flex justify-between items-center p-[16px]  w-[100%] h-[80px] bg-background3 text-Almost-White p-19  font-bold  ">
-          <span className="opacity-30"> P4$5W0rD!</span>
+          <span
+            style={{ fontSize: textLength > 20 ? "8px" : "20px" }}
+            className="opacity-30"
+          >
+            {" "}
+            P4$5W0rD!
+          </span>
           <p
             ref={paragraphRef}
             style={{ fontSize: textLength > 20 ? "8px" : "20px" }}
