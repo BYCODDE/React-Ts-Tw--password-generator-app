@@ -16,17 +16,15 @@ export default function Header({
 }: HeaderProps) {
   const [copy, setCopy] = useState(false);
 
-  const textToCopy = "Text you want to copy";
   const handleCopy = () => {
-    setCopy(!copy);
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        console.log("Text copied to clipboard:", textToCopy);
-      })
-      .catch((error) => {
-        console.error("Failed to copy text:", error);
-      });
+    console.log(paragraphRef.current);
+    const textToCopy = paragraphRef.current.textContent;
+    if (textToCopy) {
+      setCopy(!copy);
+    }
+    if (paragraphRef.current) {
+      navigator.clipboard.writeText(textToCopy);
+    }
   };
 
   const [textLength, setTextLength] = useState(0);
