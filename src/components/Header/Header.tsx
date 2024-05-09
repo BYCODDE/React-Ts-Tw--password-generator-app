@@ -17,8 +17,8 @@ export default function Header({
   const [copy, setCopy] = useState(false);
 
   const handleCopy = () => {
-    console.log(paragraphRef.current);
-    const textToCopy = paragraphRef.current.textContent;
+    const textToCopy = paragraphRef.current?.textContent ?? "";
+
     if (textToCopy) {
       setCopy(!copy);
     }
