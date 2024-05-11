@@ -48,7 +48,7 @@ export default function Header({
         </h1>
         <div className="text-[20px] text-customColor3  flex justify-between items-center p-[16px]  w-[100%] h-[80px] bg-background3 text-Almost-White p-19  font-bold  ">
           <span
-            style={{ fontSize: textLength > 20 ? "8px" : "20px" }}
+            style={{ fontSize: textLength > 20 ? "10px" : "20px" }}
             className="opacity-30"
           >
             {" "}
@@ -56,7 +56,7 @@ export default function Header({
           </span>
           <p
             ref={paragraphRef}
-            style={{ fontSize: textLength > 20 ? "8px" : "20px" }}
+            style={{ fontSize: textLength > 20 ? "10px" : "20px" }}
           >
             {isActive && isUpper ? getUpperCharacters() : null}
             {isActive && isLower ? getLowerCharacter() : null}
@@ -65,7 +65,9 @@ export default function Header({
           </p>
           <div className="flex justify-center	gap-[16px]">
             <span
-              className={`text-customColor4 text-[16px]  `}
+              className={`text-customColor4 text-[16px] ${
+                textLength > 20 ? "text-[10px]" : "text-[20px]"
+              }`}
               style={copy ? { display: "block" } : { display: "none" }}
             >
               COPIED
